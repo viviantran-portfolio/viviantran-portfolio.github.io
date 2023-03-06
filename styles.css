@@ -7,6 +7,7 @@
 
 html{
   background-color: white;
+  overflow-x: hidden;
 }
 
 body {
@@ -91,6 +92,7 @@ header {
     gap: 4vmin;
     position: absolute;
     background-color: transparent;
+    overflow-x: hidden;
   }
 
   #artwork-track > .artwork {
