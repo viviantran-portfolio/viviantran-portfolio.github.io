@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Move the button back up when the curtain is closed
         button.animate(
           {
-            top: '15vh',
+            top: '17.5vh',
           },
           { duration: 500, easing: 'ease-in-out', fill: 'forwards' }
         );
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Move the button down when the curtain is open
       button.animate(
         {
-            top: '95vh',
+            top: '97.5vh',
         },
         { duration: 500, easing: 'ease-in-out', fill: 'forwards' }
       );

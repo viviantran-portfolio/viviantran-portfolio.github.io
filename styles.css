@@ -5,7 +5,9 @@
   font-style: normal;
 }
 
-
+html{
+  background-color: white;
+}
 
 body {
     font-family: 'Noble', sans-serif;
@@ -13,21 +15,20 @@ body {
     margin: 0;
     overflow-x: hidden;
     overflow-y: scroll;
-}
-
-body * {
-    color: black;
+    transition: opacity 2s ease-out;
+    opacity: 0;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: white;
     height: 20vh;
     user-select: none;
     overflow: hidden;
     white-space:nowrap;
+    transition: background-color 2s ease-out;
   }
   
   .header-left {
@@ -38,6 +39,14 @@ header {
   .header-left h1 {
     color: white;
     font-size: 50px;
+  }
+
+  .header-left a {
+    text-decoration: none;
+  }
+
+  .header-left h1:hover {
+    text-decoration: underline;
   }
   
   .header-right {
@@ -58,10 +67,21 @@ header {
   .header-right li a {
     color: white;
     text-decoration: none;
+    cursor: pointer;
   }
 
   .header-right li a:hover {
     text-decoration: underline;
+  }
+
+  .alt-header, .alt-header .header-left h1, .alt-header .header-right li a {
+    color: white;
+    transition: color 2s ease;
+  }
+
+  .alt-header.black, .alt-header.black .header-left h1, .alt-header.black .header-right li a {
+    color: black;
+    transition: color 2s ease;
   }
 
   #artwork-track {
@@ -81,11 +101,11 @@ header {
   }
 
   #curtain-toggle {
-    height: 10vh;
-    width: 10vh;
+    height: 5vh;
+    width: 5vh;
     position: absolute;
     z-index: 3;
-    top: 15vh;
+    top: 17.5vh;
     left: 10vw;
     bottom: 3rem;
     background-color: #7ab5f4;
@@ -117,14 +137,15 @@ header {
     z-index: 2;
     position: absolute;
     left: 35%;
-    top: 25%;
-    transition: transform 0.4s ease;
+    transition: font-size 0.4s ease, transform 0.4s ease;
+    font-size: 0px;
     overflow: hidden;
     white-space: nowrap;
   }
 
   #curtain-toggle:hover > label {
-    transform: translateX(130%);
+    transform: translate(50%, -120%);
+    font-size: 20px;
   }
 
   #curtain-toggle > #open {
