@@ -5,6 +5,14 @@
   font-style: normal;
 }
 
+img{
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 html{
   background-color: white;
   overflow-x: hidden;
