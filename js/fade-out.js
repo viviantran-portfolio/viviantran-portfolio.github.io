@@ -41,7 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add click event listener to each link in the left column
   for (var j = 0; j < leftLinks.length; j++) {
     leftLinks[j].addEventListener('click', function(event) {
-      if (event.target.href.indexOf('#') === -1){
+      console.log(event.target.id)
+      if ( event.target.id !== 'off-site' && event.target.href.indexOf('#') === -1){
         event.preventDefault(); // prevent the default link behavior
         header.classList.remove('black'); // add the "black" class to the header element
         body.style.opacity = '0';
