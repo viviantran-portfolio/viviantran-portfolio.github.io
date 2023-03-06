@@ -29,6 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
         button.setAttribute('aria-expanded', 'false');
         openLabel.style.display = 'block';
         closeLabel.style.display = 'none';
+  
+        // Move the button back up when the curtain is closed
+        button.animate(
+          {
+            transform: 'translateY(0)',
+          },
+          { duration: 500, easing: 'ease-in-out', fill: 'forwards' }
+        );
       });
   
       artworks.forEach((artwork) => {
@@ -53,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
       artworks.forEach((artwork) => {
         artwork.animate(
           {
-            objectPosition: '102.5% center',
+            objectPosition: '100% center',
           },
           { duration: 1200, fill: 'forwards' }
         );
@@ -64,8 +72,18 @@ document.addEventListener("DOMContentLoaded", () => {
       button.setAttribute('aria-expanded', 'true');
       openLabel.style.display = 'none';
       closeLabel.style.display = 'block';
+  
+      
+      // Move the button down when the curtain is open
+      button.animate(
+        {
+          transform: `translateY(80vh)`,
+        },
+        { duration: 500, easing: 'ease-in-out', fill: 'forwards' }
+      );
     }
   };
+  
   
 
 

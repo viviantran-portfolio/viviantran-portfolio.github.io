@@ -9,7 +9,8 @@ body {
     font-family: 'Noble', sans-serif;
     background-color: black;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 body * {
@@ -80,7 +81,7 @@ header {
   #curtain-toggle {
     height: 10vh;
     width: 10vh;
-    position: fixed;
+    position: absolute;
     z-index: 3;
     top: 15vh;
     left: 10vw;
@@ -91,7 +92,7 @@ header {
     outline: none;
     box-shadow: 0rem 0rem 4rem rgba(0 0 0 / 35%);
     cursor: pointer;
-    transition: transform, background-color;
+    transition: transform;
     transition-timing-function: ease;
     transition-duration: 200ms;
   }
@@ -143,7 +144,7 @@ header {
   }
 
   #curtain[data-toggled="true"] {
-    transform: translateY(80%);
+    transform: translateY(80vh);
   }
   
   .center {
