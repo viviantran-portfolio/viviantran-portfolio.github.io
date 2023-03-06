@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>vivian tran</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../../styles.css">
+    <script src="../../js/fade-out.js"></script>
+  </head>
+  <body id="#writings">
+    <header class="alt-header">
+      <div class="header-left" >
+        <a href="../../index.html"><h1>V I V I A N &nbsp T R A N</h1></a>
+      </div>
+      <nav class="header-right">
+        <ul>
+          <li><a href="../videos.html">v i d e o s</a></li>
+          <li><a href="../writings.html">w r i t i n g s</a></li>
+          <li><a href="../about.html">a b o u t</a></li>
+          <li><a href="../cv.html">c v</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="center">
+        <div class="left" style="width: 45vw;">
+            <p style="font-size: 24px;"><strong><em>Dear Mom</em></strong></p>
+            <p></p>
+            <p>This is my first letter to you.</p>
+            <p>I never asked to be born.&nbsp;</p>
+            <p>Neither did you or your mom.&nbsp;</p>
+            <p>Neither did Dad and his dad.&nbsp;</p>
+            <p>None of us get a choice,</p>
+            <p>but here we are</p>
+            <p>breathing and feeling.</p>
+            <p>I’d sit in the room while you’d shower because I was afraid.</p>
+            <p>What are you so afraid of?&nbsp;</p>
+            <p>Everything.</p>
+            <p>I said everything because I couldn’t tell you that I was scared&nbsp;</p>
+            <p>of living a life I didn’t know how to live.&nbsp;</p>
+            <p>And I couldn’t tell you because I didn’t know how to.</p>
+            <p>But I wonder if you also feel lonely.&nbsp;</p>
+            <p>I wonder if you’ve ever seen yourself in me&nbsp;</p>
+            <p>like I’ve seen myself in you.&nbsp;&nbsp;</p>
+            <p>When grandma looks at the planes in the sky,</p>
+            <p>she thinks that they are stars.</p>
+            <p>The weight of it all feels so heavy.</p>
+            <p>But still, we keep breathing and feeling.&nbsp;</p>
+            <p>Years ago,&nbsp;</p>
+            <p>when we would always cut each other’s hair&nbsp;</p>
+            <p>to save money,&nbsp;</p>
+            <p>I tried to cut yours the same length as mine.&nbsp;</p>
+            <p>We would begin the same,&nbsp;</p>
+            <p>grow the same,&nbsp;</p>
+            <p>end the same.&nbsp;</p>
+            <p>That’s what I wanted.</p>
+            <p>But as you grew older,&nbsp;</p>
+            <p>your hair fell out,&nbsp;</p>
+            <p>shortening,&nbsp;</p>
+            <p>growing backward,&nbsp;</p>
+            <p>while my hair thickened and grew forward.&nbsp;</p>
+            <p>It became longer and heavier,&nbsp;</p>
+            <p>as if I took in everything&nbsp;</p>
+            <p>you once had.&nbsp;</p>
+            <p>I realized that the distance between us makes us feel lonely.&nbsp;</p>
+            <p>Distance makes anything possible,&nbsp;</p>
+            <p>but it makes being one, impossible.</p>
+            <p>Everything happened so this moment right now could happen,&nbsp;</p>
+            <p>even if the things that happened make us feel alone.</p>
+            <p>Every reason not to be vulnerable is also every reason to try.&nbsp;</p>
+            <p>So as afraid as I am, I’m willing to try&nbsp;</p>
+            <p>for you.</p>
+            <p>I wonder if love is something you don’t find,&nbsp;</p>
+            <p>but realize?</p>
+            <p>You have always loved</p>
+            <p>in the quietest ways.&nbsp;</p>
+            <p>Quiet like the areas of the floor that creak—</p>
+            <p>those tiny cracks in the walls</p>
+            <p>and our dying,&nbsp;</p>
+            <p>flickering lights.</p>
+            <p>I tell you I love you in everything I’ve forgotten.&nbsp;</p>
+            <p>I tell you I love you by not telling you I love you.&nbsp;</p>
+            <p>It’s okay that you can’t tell me you’re proud of me.&nbsp;</p>
+            <p>It’s okay if you can’t tell me you love me too.</p>
+            <p>It’s hard to live in the world,&nbsp;</p>
+            <p>but if I love you,&nbsp;</p>
+            <p>I love the world that shaped you too.</p>
+            <p>This letter is like an empty envelope.&nbsp;</p>
+            <p>One day you will receive this and not be able to read it.&nbsp;</p>
+            <p>But it’s something you can hold,&nbsp;</p>
+            <p>and use it to wipe your tears.&nbsp;</p>
+            <p>So yes,</p>
+            <p>I think love is something you don’t find </p>
+            <p>but realize —</p>
+            <p>that to love, we just need to exist</p>
+            <p>and everything I ever needed from you,&nbsp;</p>
+            <p>has always been there.</p>
+            <p></p>
+            <p>With all the love I can’t give,</p>
+            <p></p>
+            <p>Your daughter</p>       
+        </div>
+    </div>
+
+</body>
+</html>

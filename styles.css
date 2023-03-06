@@ -76,12 +76,12 @@ header {
 
   .alt-header, .alt-header .header-left h1, .alt-header .header-right li a {
     color: white;
-    transition: color 2s ease;
+    transition: color 1s ease;
   }
 
   .alt-header.black, .alt-header.black .header-left h1, .alt-header.black .header-right li a {
     color: black;
-    transition: color 2s ease;
+    transition: color 1s ease;
   }
 
   #artwork-track {
@@ -178,6 +178,39 @@ header {
     align-items: center;
   }
 
+  .left {
+    margin: 7vh 0 20vh 0;
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+
+  .left p {
+    font-size: 18px;
+  }
+
+  .left a {
+    width: fit-content;
+    font-size: 24px;
+    margin-bottom: 10vh;
+    text-decoration: none;
+    color: black;
+  }
+
+  .left a:hover {
+    text-decoration: underline;
+  }
+
+  .left a:hover:before {
+    display: inline-block;
+  }
+
+  .left a::before {
+    content: '>';
+    display: none;
+  }
+
   .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -206,13 +239,9 @@ header {
   
   .caption {
     position: absolute;
-    bottom: -5vh;
+    bottom: 0;
     width: 50%;
     text-align: center;
-    padding: 10px;
-
-    border-width: 5px;
-    border: outset;
 
     background-color: rgba(255, 255, 255, 0.8);
     box-sizing: border-box;
