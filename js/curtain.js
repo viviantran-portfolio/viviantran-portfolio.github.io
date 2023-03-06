@@ -10,6 +10,7 @@ const artworks = document.querySelectorAll(".artwork");
 document.addEventListener("DOMContentLoaded", () => {
     let nextPercentage = 100;
     track.style.transform = `translateX(${nextPercentage}%)`;
+    document.body.style.overflowY = "auto";
   });
 
 
@@ -77,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Move the button down when the curtain is open
       button.animate(
         {
-            top: '97.5vh',
+            top: '87.5vh',
         },
         { duration: 500, easing: 'ease-in-out', fill: 'forwards' }
       );

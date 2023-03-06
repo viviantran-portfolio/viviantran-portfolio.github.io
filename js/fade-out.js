@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var body = document.querySelector('body');
 
   body.style.opacity = '0';
+  body.style.overflow = 'auto';
 
   // Fade in the header and body elements
   setTimeout(function() {
