@@ -21,6 +21,7 @@ html{
 body {
     font-family: 'Noble', sans-serif;
     background-color: black;
+    width: 100%;
     margin: 0;
     overflow-x: hidden;
     overflow-y: scroll;
