@@ -1,38 +1,62 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Portfolio</title>
+    <title>VIVIAN TRAN</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
     <header>
       <div class="header-left">
-        <h1>VIVIAN TRAN</h1>
+        <h1>V I V I A N &nbsp T R A N</h1>
       </div>
       <nav class="header-right">
         <ul>
-          <li><a href="#videos">videos</a></li>
-          <li><a href="#writings">writings</a></li>
-          <li><a href="#about">about</a></li>
-          <li><a href="#cv">cv</a></li>
+          <li><a href="#videos">v i d e o s</a></li>
+          <li><a href="#writings">w r i t i n g s</a></li>
+          <li><a href="#about">a b o u t</a></li>
+          <li><a href="#cv">c v</a></li>
         </ul>
       </nav>
     </header>
 
-    <div id="artwork-track-background"></div>
-
-    <div id="artwork-track" data-percentage="0" data-prev-percentage="0">
-        <img class="artwork" src="assets\portfolio stuff\misc\arrow of time still install.png">
-        <img class="artwork" src="assets\portfolio stuff\misc\arrow of time still install.png">
-        <img class="artwork" src="assets\portfolio stuff\misc\arrow of time still install.png">
-        <img class="artwork" src="assets\portfolio stuff\misc\arrow of time still install.png">
-        <img class="artwork" src="assets\portfolio stuff\misc\arrow of time still install.png">
-        <img class="artwork" src="assets\portfolio stuff\misc\arrow of time still install.png">
-        <img class="artwork" src="assets\portfolio stuff\misc\arrow of time still install.png">
+    <div id="artwork-track"  ondragstart="return false;" ondrop="return false;" data-percentage="0" data-prev-percentage="0">
+      <img class="artwork" src="assets\portfolio stuff\misc\arrow of time still install.png">            
+      <img class="artwork" src="assets\portfolio stuff\misc\arrow of time still install.png">
+      <img class="artwork" src="assets\portfolio stuff\misc\arrow of time still install.png">
+      <img class="artwork" src="assets\portfolio stuff\misc\arrow of time still install.png">
+      <img class="artwork" src="assets\portfolio stuff\misc\arrow of time still install.png">
+      <img class="artwork" src="assets\portfolio stuff\misc\arrow of time still install.png">
+      <img class="artwork" src="assets\portfolio stuff\misc\arrow of time still install.png">
     </div>
 
-    <script src="js/track.js"></script>
-    
+    <button id="curtain-toggle" type="button" onclick="toggleCurtain()">
+      <label id="open">o p e n</label>
+      <label id="close">c l o s e</label>
+    </button>
+
+    <div id="curtain" data-toggled="false">
+      <div class="center">
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src="assets\portfolio stuff\Painting-Drawing-Installation\Circles\I tell you I love you\I tell you I love you without telling you I love you.jpg">
+            <div class="caption">Caption for Image 1</div>
+          </div>
+          <div class="grid-item">
+            <img src="assets\portfolio stuff\Painting-Drawing-Installation\Circles\I tell you I love you\I tell you I love you without telling you I love you.jpg">          <div class="caption">Caption for Image 2</div>
+          </div>
+          <div class="grid-item">
+            <img src="assets\portfolio stuff\Painting-Drawing-Installation\Circles\I tell you I love you\I tell you I love you without telling you I love you.jpg">          <div class="caption">Caption for Image 3</div>
+          </div>
+          <div class="grid-item">
+            <img src="assets\portfolio stuff\Painting-Drawing-Installation\Circles\I tell you I love you\I tell you I love you without telling you I love you.jpg">          <div class="caption">Caption for Image 4</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <script src="js/curtain.js"></script>
 
   </body>
 </html>

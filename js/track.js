@@ -1,8 +1,12 @@
 const track = document.getElementById("artwork-track");
 const artworks = document.querySelectorAll(".artwork");
 
-const handleOnDown = e => {
-  track.dataset.mouseDownAt = e.clientX;
+const handleOnDown = (e) => {
+  if (e.touches) {
+    track.dataset.mouseDownAt = e.touches[0].clientX;
+  } else {
+    track.dataset.mouseDownAt = e.clientX;
+  }
 };
 
 const handleOnUp = () => {
@@ -10,14 +14,15 @@ const handleOnUp = () => {
   track.dataset.prevPercentage = track.dataset.percentage;
 };
 
-const handleOnMove = e => {
+const handleOnMove = (e) => {
   if (track.dataset.mouseDownAt === "0") return;
 
-  const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX;
-  const maxDelta = window.innerWidth / 2;
+  const mouseDelta =
+    parseFloat(track.dataset.mouseDownAt) -
+    (e.touches ? e.touches[0].clientX : e.clientX);
+  const maxDelta = window.innerWidth;
 
-  const percentage =
-    (mouseDelta / maxDelta) * -100;
+  const percentage = (mouseDelta / maxDelta) * -100;
   const nextPercentageUnconstrained =
     parseFloat(track.dataset.prevPercentage) + percentage;
   const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 2.5), -62.5);
@@ -46,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let nextPercentage = 100;
   const animateNextPercentage = () => {
     nextPercentage -= 1;
-    if (nextPercentage >= 2.5) {
+    if (nextPercentage >= -6) {
       track.style.transform = `translateX(${nextPercentage}%)`;
       artworks.forEach((artwork) => {
         artwork.style.objectPosition = `${100 + nextPercentage}% center`;
@@ -59,8 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* Had to add extra lines for touch events */
 window.addEventListener("mousedown", handleOnDown);
-window.addEventListener("touchstart", (e) => handleOnDown(e.touches[0]));
+window.addEventListener("touchstart", handleOnDown);
 window.addEventListener("mouseup", handleOnUp);
-window.addEventListener("touchend", (e) => handleOnUp(e.touches[0]));
+window.addEventListener("touchend", handleOnUp);
 window.addEventListener("mousemove", handleOnMove);
-window.addEventListener("touchmove", (e) => handleOnMove(e.touches[0]));
+window.addEventListener("touchmove", handleOnMove);
