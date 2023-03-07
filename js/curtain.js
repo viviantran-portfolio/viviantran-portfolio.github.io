@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let nextPercentage = 100;
     track.style.transform = `translateX(${nextPercentage}%)`;
     document.body.style.overflowY = "auto";
+    document.body.style.overflowX = "hidden";
   });
 
 
