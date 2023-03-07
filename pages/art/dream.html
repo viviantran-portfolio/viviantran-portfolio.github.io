@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>vivian tran</title>
+    <title>During the Dream - vivian tran</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../../styles.css">
     <script src="../../js/fade-out.js"></script>
@@ -37,6 +37,15 @@
         <p>2022</p>
         </div>
     </div>
+    <script>
+      const artItemImages = document.querySelectorAll('.art-item img');
+
+      artItemImages.forEach(function(image) {
+        image.addEventListener('click', function() {
+        image.classList.toggle('zoomed'); // toggle the "zoomed" class
+      });
+    });
+  </script>
 
 </body>
 </html>

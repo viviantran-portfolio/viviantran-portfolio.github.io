@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>vivian tran</title>
+    <title>I Tell You I Love You Without Telling You I Love You - vivian tran</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../../styles.css">
     <script src="../../js/fade-out.js"></script>
@@ -22,7 +22,28 @@
     </header>
 
     <div class="center">
+      <div class="art-container">
+        <div class="art-item">
+          <img src="../../assets\portfolio stuff\Painting-Drawing-Installation\Circles\I tell you I love you\I tell you I love you without telling you I love you.jpg">
+        </div>
+      </div>
+      <div class="left">
+        <p>I Tell You I Love You Without Telling You I Love You</p>
+        <p>Oil on wood panel</p>
+        <p>24” x 24”</p>
+        <p>2022</p>
+        </div>
     </div>
+
+    <script>
+        const artItemImages = document.querySelectorAll('.art-item img');
+
+        artItemImages.forEach(function(image) {
+          image.addEventListener('click', function() {
+          image.classList.toggle('zoomed'); // toggle the "zoomed" class
+        });
+      });
+    </script>
 
 </body>
 </html>
