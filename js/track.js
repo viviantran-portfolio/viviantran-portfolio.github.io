@@ -1,6 +1,3 @@
-const isMobile = /Mobile/.test(navigator.userAgent);
-
-if (!isMobile) {
   const track = document.getElementById("artwork-track");
   const artworks = document.querySelectorAll(".artwork");
 
@@ -72,4 +69,3 @@ if (!isMobile) {
   window.addEventListener("touchend", handleOnUp);
   window.addEventListener("mousemove", handleOnMove);
   window.addEventListener("touchmove", handleOnMove);
-}
