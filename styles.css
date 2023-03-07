@@ -401,6 +401,11 @@ header {
 }
 
 @media screen and (max-width: 1300px) {
+
+  #artwork-track {
+    display: none;
+    pointer-events: none;
+  }
   
   #curtain-toggle {
     display: none;

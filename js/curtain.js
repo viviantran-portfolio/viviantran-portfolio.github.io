@@ -1,6 +1,4 @@
 const isMobile = /Mobile/.test(navigator.userAgent);
-
-if (!isMobile) {
 // Get the <div> element with id="curtain"
 const curtainDiv = document.getElementById("curtain");
 const button = document.getElementById("curtain-toggle");
@@ -19,73 +17,75 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   const toggleCurtain = () => {
-    if (curtainDiv.dataset.toggled === 'true') {
-      // Curtain is currently open
-  
-      // Animate the position of the track and the artworks to the right of the viewport
-      track.animate(
-        {
-          transform: 'translateX(100%)',
-        },
-        { duration: 600, fill: 'forwards' }
-      ).addEventListener('finish', () => {
-        // Update the state of the curtain after the animation finishes
-        curtainDiv.dataset.toggled = 'false';
-        button.setAttribute('aria-expanded', 'false');
-        openLabel.style.display = 'block';
-        closeLabel.style.display = 'none';
-  
-        // Move the button back up when the curtain is closed
-        button.animate(
+    if (!isMobile) {
+      if (curtainDiv.dataset.toggled === 'true') {
+        // Curtain is currently open
+    
+        // Animate the position of the track and the artworks to the right of the viewport
+        track.animate(
           {
-            top: '17.5vh',
-          },
-          { duration: 500, easing: 'ease-in-out', fill: 'forwards' }
-        );
-      });
-  
-      artworks.forEach((artwork) => {
-        artwork.animate(
-          {
-            objectPosition: '100% center',
+            transform: 'translateX(100%)',
           },
           { duration: 600, fill: 'forwards' }
-        );
-      });
-    } else {
-      // Curtain is currently closed
-  
-      // Animate the position of the track and the artworks to the left of the viewport
-      track.animate(
-        {
-          transform: 'translateX(2.5%)',
-        },
-        { duration: 1200, fill: 'forwards' }
-      );
-  
-      artworks.forEach((artwork) => {
-        artwork.animate(
+        ).addEventListener('finish', () => {
+          // Update the state of the curtain after the animation finishes
+          curtainDiv.dataset.toggled = 'false';
+          button.setAttribute('aria-expanded', 'false');
+          openLabel.style.display = 'block';
+          closeLabel.style.display = 'none';
+    
+          // Move the button back up when the curtain is closed
+          button.animate(
+            {
+              top: '17.5vh',
+            },
+            { duration: 500, easing: 'ease-in-out', fill: 'forwards' }
+          );
+        });
+    
+        artworks.forEach((artwork) => {
+          artwork.animate(
+            {
+              objectPosition: '100% center',
+            },
+            { duration: 600, fill: 'forwards' }
+          );
+        });
+      } else {
+        // Curtain is currently closed
+    
+        // Animate the position of the track and the artworks to the left of the viewport
+        track.animate(
           {
-            objectPosition: '100% center',
+            transform: 'translateX(2.5%)',
           },
           { duration: 1200, fill: 'forwards' }
         );
-      });
-  
-      // Update the state of the curtain immediately
-      curtainDiv.dataset.toggled = 'true';
-      button.setAttribute('aria-expanded', 'true');
-      openLabel.style.display = 'none';
-      closeLabel.style.display = 'block';
-  
-      
-      // Move the button down when the curtain is open
-      button.animate(
-        {
-            top: '87.5vh',
-        },
-        { duration: 500, easing: 'ease-in-out', fill: 'forwards' }
-      );
+    
+        artworks.forEach((artwork) => {
+          artwork.animate(
+            {
+              objectPosition: '100% center',
+            },
+            { duration: 1200, fill: 'forwards' }
+          );
+        });
+    
+        // Update the state of the curtain immediately
+        curtainDiv.dataset.toggled = 'true';
+        button.setAttribute('aria-expanded', 'true');
+        openLabel.style.display = 'none';
+        closeLabel.style.display = 'block';
+    
+        
+        // Move the button down when the curtain is open
+        button.animate(
+          {
+              top: '87.5vh',
+          },
+          { duration: 500, easing: 'ease-in-out', fill: 'forwards' }
+        );
+      }
     }
   };
   
@@ -146,4 +146,3 @@ window.addEventListener("mouseup", handleOnUp);
 window.addEventListener("touchend", handleOnUp);
 window.addEventListener("mousemove", handleOnMove);
 window.addEventListener("touchmove", handleOnMove);
-}
