@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         body.style.opacity = '0';
         setTimeout(function() {
           window.location.href = event.target.href; // navigate to the link's href after a delay
-        }, 2000);
+        }, 1000);
       }
     });
   }
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
       body.style.opacity = '0';
       setTimeout(function() {
         window.location.href = logoLink.href; // navigate to the link's href after a delay
-      }, 2000);
+      }, 1000);
     });
 
     // Add click event listener to each link in the left column
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         body.style.opacity = '0';
         setTimeout(function() {
           window.location.href = event.target.href; // navigate to the link's href after a delay
-        }, 2000);
+        }, 1000);
       }
     });
   }
