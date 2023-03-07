@@ -403,7 +403,7 @@ header {
 @media screen and (max-width: 1300px) {
   html, body {
     overflow: hidden;
-    overflowY: auto;
+    overflow-Y: auto;
   }
 
   #curtain-toggle:hover > label {
