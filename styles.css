@@ -408,4 +408,12 @@ header {
   #curtain-toggle:active > label {
     transform: translate(100%, -120%);
   }
+
+  .header-left h1 {
+    font-size: 60px;
+  }
+
+  .header-right {
+    font-size: 40px;
+  }
 }
