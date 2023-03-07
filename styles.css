@@ -415,7 +415,11 @@ header {
     pointer-events: none;
   }
 
+  .header-left h1 {
+    font-size: 30px;
+  }
+
   .header-right {
-    font-size: 40px;
+    font-size: 20px;
   }
 }
