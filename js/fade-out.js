@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     altheader.classList.add('black'); // add the "black" class to the header element
     body.style.opacity = '0';
     setTimeout(function() {
-      var url = new URL(event.target.href);
+      var url = new URL(logoLink.href);
       var path = url.pathname;
       history.pushState({ page: path }, '', path);
       navigateToPage(path);

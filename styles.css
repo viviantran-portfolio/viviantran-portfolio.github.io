@@ -261,6 +261,9 @@ header {
     height: 100%;
     object-fit: cover;
     transition: transform 0.2s ease-out;
+  }
+
+  .art-item img:not([class*=".zoomed"]){
     cursor: zoom-in;
   }
   
@@ -343,7 +346,7 @@ header {
   display: block;
 }
 
-.zoomed {
+.proj.zoomed, .art-item img.zoomed {
   transform: scale(1.3);
   cursor: zoom-out;
 }

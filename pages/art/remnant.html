@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>vivian tran</title>
+    <title>Remnant of a Remnant - vivian tran</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../../styles.css">
     <script src="../../js/fade-out.js"></script>
   </head>
   <body>
     <header class="alt-header">
-      <div class="header-left" >
+      <div class="header-left">
         <a href="../../index.html"><h1>V I V I A N &nbsp T R A N</h1></a>
       </div>
       <nav class="header-right">
@@ -22,7 +22,37 @@
     </header>
 
     <div class="center">
+      <div class="art-container">
+        <div class="art-item">
+          <img src="../../assets\portfolio stuff\Painting-Drawing-Installation\Remnant of a Remnant\remnant of a remnant.jpg">
+        </div>
+      </div>
+      <div class="art-container">
+        <div class="art-item">
+          <img src="../../assets\portfolio stuff\Painting-Drawing-Installation\Remnant of a Remnant\Dad.jpg">
+        </div>
+        <div class="art-item">
+          <img src="../../assets\portfolio stuff\Painting-Drawing-Installation\Remnant of a Remnant\Remnant of a Remnant 5.jpg">
+        </div>
+        <div class="art-item">
+          <img src="../../assets\portfolio stuff\Painting-Drawing-Installation\Remnant of a Remnant\Mom.jpg">
+        </div>
+      </div>
+      <div class="left">
+        <p>Remnant of a Remnant</p>
+        <p>Archival pigment print</p>
+        <p>2018</p>
+        </div>
     </div>
+    <script>
+      const artItemImages = document.querySelectorAll('.art-item img');
+
+      artItemImages.forEach(function(image) {
+        image.addEventListener('click', function() {
+        image.classList.toggle('zoomed'); // toggle the "zoomed" class
+      });
+    });
+  </script>
 
 </body>
 </html>
