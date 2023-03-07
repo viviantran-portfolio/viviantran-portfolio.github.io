@@ -1,26 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var links = document.querySelectorAll('.header-right li a');
-  var art = document.querySelectorAll('.grid-item');
-  var logoLink = document.querySelector('.header-left a');
-  var leftLinks = document.querySelectorAll('.left a');
-  var header = document.querySelector('header');
-  var altheader = document.querySelector('.alt-header');
-  var body = document.querySelector('body');
+  const links = document.querySelectorAll('.header-right li a');
+  const art = document.querySelectorAll('.grid-item');
+  const logoLink = document.querySelector('.header-left a');
+  const leftLinks = document.querySelectorAll('.left a');
+  const header = document.querySelector('header');
+  const altheader = document.querySelector('.alt-header');
+  const body = document.querySelector('body');
   const isMobile = /Mobile/.test(navigator.userAgent);
 
-  if(!isMobile){
-    const artworks = document.querySelectorAll(".artwork");
+  function fadeOutAndNavigate(path) {
+    body.style.opacity = '0';
+    setTimeout(function() {
+      navigateToPage(path);
+    }, 1000);
+  }
+
+  function navigateToPage(path) {
+    window.location.pathname = path;
+  }
+
+  if (!isMobile) {
+    const artworks = document.querySelectorAll('.artwork');
 
     artworks.forEach((artwork) => {
-    artwork.addEventListener("click", () => {
+      artwork.addEventListener('click', () => {
         header.style.backgroundColor = 'white';
-      
-        body.style.opacity = '0';
-        setTimeout(function() {
-          var path = artwork.getAttribute('data-page');
-          history.pushState({ page: path }, '', path);
-          navigateToPage(path);
-        }, 1000);
+        fadeOutAndNavigate(artwork.getAttribute('data-page'));
       });
     });
   }
@@ -28,16 +33,14 @@ document.addEventListener('DOMContentLoaded', function() {
   body.style.opacity = '0';
   body.style.overflow = 'auto';
 
-  if (location.pathname === "/index.html" || location.pathname === "/") {
-    // Fade in the header and body elements
+  if (location.pathname === '/index.html' || location.pathname === '/') {
     setTimeout(function() {
       header.style.backgroundColor = 'black';
       body.style.opacity = '1';
-    }, 100); // delay for 0.1 seconds (100 milliseconds)
+    }, 100);
   } else {
-    // Fade in the header and body elements
     setTimeout(function() {
-      if(altheader != null){
+      if (altheader != null) {
         altheader.classList.add('black');
       }
       body.style.opacity = '1';
@@ -48,93 +51,61 @@ document.addEventListener('DOMContentLoaded', function() {
   if (window.performance && window.performance.navigation.type === window.performance.navigation.TYPE_BACK_FORWARD) {
     window.location.reload();
   }
-  
 
-  // Add click event listener to each link
-  for (var i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', function(event) {
-      if (event.target.href.indexOf('#') === -1){
-        event.preventDefault(); // prevent the default link behavior
-        
-        if (location.pathname === "/index.html" || location.pathname === "/"){
-          header.style.backgroundColor = 'white'; // add the "black" class to the header element
+  links.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const url = new URL(event.target.href);
+
+      if (url.hash === '') {
+        event.preventDefault();
+
+        if (location.pathname === '/index.html' || location.pathname === '/') {
+          header.style.backgroundColor = 'white';
         } else {
-          if(altheader != null){
-            altheader.classList.remove('black'); // add the "black" class to the header element
+          if (altheader != null) {
+            altheader.classList.remove('black');
           }
         }
 
-        body.style.opacity = '0';
-        setTimeout(function() {
-          var url = new URL(event.target.href);
-          var path = url.pathname;
-          history.pushState({ page: path }, '', path);
-          navigateToPage(path);
-        }, 1000);
+        fadeOutAndNavigate(url.pathname);
       }
     });
-  }
-
-  // Add click event listener to logo link
-  logoLink.addEventListener('click', function(event) {
-    event.preventDefault(); // prevent the default link behavior
-    if(altheader != null){
-      altheader.classList.add('black'); // add the "black" class to the header element
-    }
-    body.style.opacity = '0';
-    setTimeout(function() {
-      var url = new URL(logoLink.href);
-      var path = url.pathname;
-      history.pushState({ page: path }, '', path);
-      navigateToPage(path);
-    }, 1000);
   });
 
-  // Add click event listener to each link in the left column
-  for (var j = 0; j < leftLinks.length; j++) {
-    leftLinks[j].addEventListener('click', function(event) {
-      if ( event.target.id !== 'off-site' && event.target.href.indexOf('#') === -1){
-        event.preventDefault(); // prevent the default link behavior
-        if(altheader != null){
-          altheader.classList.remove('black'); // add the "black" class to the header element
+  logoLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    if (altheader != null) {
+      altheader.classList.add('black');
+    }
+    fadeOutAndNavigate(new URL(logoLink.href).pathname);
+  });
+
+  leftLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      if (event.target.id !== 'off-site') {
+        const url = new URL(event.target.href);
+
+        if (url.hash === '') {
+          event.preventDefault();
+          if (altheader != null) {
+            altheader.classList.remove('black');
+          }
+          fadeOutAndNavigate(url.pathname);
         }
-        body.style.opacity = '0';
-        setTimeout(function() {
-          var url = new URL(event.target.href);
-          var path = url.pathname;
-          history.pushState({ page: path }, '', path);
-          navigateToPage(path);
-        }, 1000);
       }
     });
-  }
+  });
 
-  // Add click event listener to each art item
-  for (var i = 0; i < art.length; i++) {
-    art[i].addEventListener('click', function(event) {
-      header.style.backgroundColor = '#FFFFFF'; // set the header background color to white
-      body.style.opacity = '0'; // fade out the body
-      setTimeout(function() {
-        var path = event.target.closest('.grid-item').getAttribute('data-page');
-        history.pushState({ page: path }, '', path);
-        navigateToPage(path);
-      }, 1000); // delay for 1 second (1000 milliseconds)
+  art.forEach((item) => {
+    item.addEventListener('click', (event) => {
+      header.style.backgroundColor = '#FFFFFF';
+      fadeOutAndNavigate(event.target.closest('.grid-item').getAttribute('data-page'));
     });
-  }
-  
-  // Listen for the popstate event to trigger specific code when the user navigates back to a previous state
-  window.addEventListener('popstate', function(event) {
+  });
+
+  window.addEventListener('popstate', (event) => {
     if (event.state) {
-      // Code to execute when the user navigates back to a previous state
       navigateToPage(event.state.page);
     }
   });
-
-    // Function to navigate to the specified page
-    function navigateToPage(path) {
-      // Use window.location.pathname to navigate to the specified page
-      console.log(path)
-
-      window.location.pathname = path;
-    }
 });
