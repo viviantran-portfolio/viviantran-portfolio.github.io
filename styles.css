@@ -401,15 +401,12 @@ header {
 }
 
 @media screen and (max-width: 1300px) {
-  html, body {
-    overflow: hidden;
-    overflow-Y: auto;
-  }
 
-  #curtain-toggle:hover > label {
-    transform: translate(150%, -120%);
-    font-size: 20px;
+  .curtain-toggle {
+    display: none;
+    pointer-events: none;
   }
+  
 
   .header-left h1 {
     font-size: 30px;
