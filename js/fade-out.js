@@ -6,6 +6,24 @@ document.addEventListener('DOMContentLoaded', function() {
   var header = document.querySelector('header');
   var altheader = document.querySelector('.alt-header');
   var body = document.querySelector('body');
+  const isMobile = /Mobile/.test(navigator.userAgent);
+
+  if(!isMobile){
+    const artworks = document.querySelectorAll(".artwork");
+
+    artworks.forEach((artwork) => {
+    artwork.addEventListener("click", () => {
+        header.style.backgroundColor = 'white';
+      
+        body.style.opacity = '0';
+        setTimeout(function() {
+          var path = artwork.getAttribute('data-page');
+          history.pushState({ page: path }, '', path);
+          navigateToPage(path);
+        }, 1000);
+      });
+    });
+  }
 
   body.style.opacity = '0';
   body.style.overflow = 'auto';
@@ -38,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (event.target.href.indexOf('#') === -1){
         event.preventDefault(); // prevent the default link behavior
         
-        if (location.pathname === "/index.html"){
+        if (location.pathname === "/index.html" || location.pathname === "/"){
           header.style.backgroundColor = 'white'; // add the "black" class to the header element
         } else {
           if(altheader != null){
