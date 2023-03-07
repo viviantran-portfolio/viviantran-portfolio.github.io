@@ -25,6 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 100);
   }
 
+  if (window.performance && window.performance.navigation.type === window.performance.navigation.TYPE_BACK_FORWARD) {
+    window.location.reload();
+  }
+  
+
   // Add click event listener to each link
   for (var i = 0; i < links.length; i++) {
     links[i].addEventListener('click', function(event) {
@@ -56,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(function() {
       var url = new URL(event.target.href);
       var path = url.pathname;
-      console.log(path);
       history.pushState({ page: path }, '', path);
       navigateToPage(path);
     }, 1000);
@@ -65,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add click event listener to each link in the left column
   for (var j = 0; j < leftLinks.length; j++) {
     leftLinks[j].addEventListener('click', function(event) {
-      console.log(event.target.id)
       if ( event.target.id !== 'off-site' && event.target.href.indexOf('#') === -1){
         event.preventDefault(); // prevent the default link behavior
         altheader.classList.remove('black'); // add the "black" class to the header element
@@ -98,13 +101,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (event.state) {
       // Code to execute when the user navigates back to a previous state
       navigateToPage(event.state.page);
-      console.log('User navigated back to ' + event.state.url);
     }
   });
 
     // Function to navigate to the specified page
     function navigateToPage(path) {
       // Use window.location.pathname to navigate to the specified page
+      console.log(path)
+
       window.location.pathname = path;
     }
 });
