@@ -406,6 +406,11 @@ header {
     display: none;
     pointer-events: none;
   }
+
+  .artwork {
+    display: none;
+    pointer-events: none;
+  }
   
   #curtain-toggle {
     display: none;
