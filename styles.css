@@ -405,6 +405,10 @@ header {
 
 @media screen and (max-width: 1300px) {
 
+  header {
+    height: 15vh;
+  }
+
   #artwork-track {
     display: none;
     pointer-events: none;
