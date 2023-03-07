@@ -1,3 +1,6 @@
+const isMobile = /Mobile/.test(navigator.userAgent);
+
+if (!isMobile) {
 // Get the <div> element with id="curtain"
 const curtainDiv = document.getElementById("curtain");
 const button = document.getElementById("curtain-toggle");
@@ -143,3 +146,4 @@ window.addEventListener("mouseup", handleOnUp);
 window.addEventListener("touchend", handleOnUp);
 window.addEventListener("mousemove", handleOnMove);
 window.addEventListener("touchmove", handleOnMove);
+}
