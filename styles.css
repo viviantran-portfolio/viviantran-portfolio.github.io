@@ -405,8 +405,14 @@ header {
     overflow: hidden;
   }
 
-  #curtain-toggle:active > label {
-    transform: translate(100%, -120%);
+  #curtain-toggle {
+    display: none;
+    pointer-events: none;
+  }
+
+  #artwork-track {
+    display: none;
+    pointer-events: none;
   }
 
   .header-right {
