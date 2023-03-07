@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>vivian tran</title>
+    <title>A Bed's Width Apart - vivian tran</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../../styles.css">
     <script src="../../js/fade-out.js"></script>
+    <script src="../../js/slideshow.js"></script>
   </head>
   <body>
     <header class="alt-header">
@@ -22,6 +23,36 @@
     </header>
 
     <div class="center">
+      <div id="slider-bed" class="slider">
+        <img class="proj active" src="../../assets\portfolio stuff\Painting-Drawing-Installation\A Bed_s Width Apart\Dad.jpg">
+        <img class="proj" src="../../assets\portfolio stuff\Painting-Drawing-Installation\A Bed_s Width Apart\Mom.jpg">
+        <img class="proj" src="../../assets\portfolio stuff\Painting-Drawing-Installation\A Bed_s Width Apart\Distance.jpg">
+        <img class="proj" src="../../assets\portfolio stuff\Painting-Drawing-Installation\A Bed_s Width Apart\bed2.jpg">
+        <img class="proj" src="../../assets\portfolio stuff\Painting-Drawing-Installation\A Bed_s Width Apart\bed1.jpg">
+
+  
+        <div class="arrow notright">&lt;</div>
+        <div class="arrow right">&gt;</div>
+        
+        <div class="dots">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        
+        <script>
+          const sliderBed = document.querySelector('#slider-bed');
+          initSlider(sliderBed);
+        </script>
+      </div>
+      <div class="left">
+        <p>A Bed’s Width Apart</p>
+        <p>Oil on canvas</p>
+        <p>48” x 72”</p>
+        <p>2019</p>
+        </div>
     </div>
 
 </body>

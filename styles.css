@@ -23,7 +23,7 @@ body {
     width: 100%;
     margin: 0;
     overflow: hidden;
-    transition: opacity 2s ease-out;
+    transition: opacity 1s ease-out;
     opacity: 0;
 }
 
@@ -40,7 +40,7 @@ header {
     user-select: none;
     overflow: hidden;
     white-space:nowrap;
-    transition: background-color 2s ease-out;
+    transition: background-color 1s ease-out;
   }
   
   .header-left {

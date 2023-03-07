@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>vivian tran</title>
+    <title>To Love We Just Need to Exist - vivian tran</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../../styles.css">
     <script src="../../js/fade-out.js"></script>
@@ -22,7 +22,34 @@
     </header>
 
     <div class="center">
-    </div>
+
+      <iframe style="margin-top: 15vh;" width="800" height="450" src="https://www.youtube.com/embed/bj7-SK_6xAM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+      <div class="art-item" style="width: 60vw; margin-top: 15vh;">
+        <img src="../../assets\portfolio stuff\misc\Bird.gif">
+      </div>
+      <div class="art-item" style="width: 60vw; margin-top: 15vh; margin-bottom: 5vh;">
+        <img src="../../assets\portfolio stuff\misc\Sink.gif">
+      </div>
+    <div class="left">
+      <p>To Love We Just Need to Exist</p>
+      <p>Two channel video projection, 13 minute 57 second loop</p>
+      <p>2021</p>
+      <p></p>
+      <p>
+        In this installation, I scrounged through countless hours of archival footage from the 1900s to the 2000s.  In my search, I stitched together clips of birds flying in the air aligned along one path.  I projected this sequence above on an air vent. In a sink filled with water beneath it, I projected water footage found from an archival documentary of the US Navy in the Vietnam War.
+      </p>
+      </div>
+  </div>
+  <script>
+    const artItemImages = document.querySelectorAll('.art-item img');
+
+    artItemImages.forEach(function(image) {
+      image.addEventListener('click', function() {
+      image.classList.toggle('zoomed'); // toggle the "zoomed" class
+    });
+  });
+</script>
 
 </body>
 </html>

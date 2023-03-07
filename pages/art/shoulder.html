@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>vivian tran</title>
+    <title>Looking Over the Shoulder - vivian tran</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../../styles.css">
     <script src="../../js/fade-out.js"></script>
@@ -22,7 +22,28 @@
     </header>
 
     <div class="center">
+      <div class="art-container">
+        <div class="art-item" style="width: 50vw; margin-top: 20vh; margin-bottom: 15vh;">
+          <img src="../../assets\portfolio stuff\Painting-Drawing-Installation\Looking Over the Shoulder\2 Looking Over the Shoulder.jpg">
+        </div>
+      </div>
+      <div class="left">
+        <p>Looking Over the Shoulder</p>
+        <p>Oil on canvas</p>
+        <p>60” x 48”</p>
+        <p>2019</p>
+        </div>
     </div>
+
+    <script>
+        const artItemImages = document.querySelectorAll('.art-item img');
+
+        artItemImages.forEach(function(image) {
+          image.addEventListener('click', function() {
+          image.classList.toggle('zoomed'); // toggle the "zoomed" class
+        });
+      });
+    </script>
 
 </body>
 </html>

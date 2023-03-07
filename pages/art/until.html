@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>vivian tran</title>
+    <title>Until the Begining - vivian tran</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../../styles.css">
     <script src="../../js/fade-out.js"></script>
+    <script src="../../js/slideshow.js"></script>
   </head>
   <body>
     <header class="alt-header">
@@ -22,6 +23,40 @@
     </header>
 
     <div class="center">
+      <div id="slider-until" class="slider">
+        <img class="proj active" src="../../assets\portfolio stuff\Painting-Drawing-Installation\Until the Beginning\Until the Beginning 2.jpg">
+        <img class="proj" src="../../assets\portfolio stuff\Painting-Drawing-Installation\Until the Beginning\DSC_0014.jpg">
+        <img class="proj" src="../../assets\portfolio stuff\Painting-Drawing-Installation\Until the Beginning\_DSC6965.jpg">
+        <img class="proj" src="../../assets\portfolio stuff\Painting-Drawing-Installation\Until the Beginning\_DSC6978.jpg">
+        <img class="proj" src="../../assets\portfolio stuff\Painting-Drawing-Installation\Until the Beginning\_DSC6981.jpg">
+        <img class="proj" src="../../assets\portfolio stuff\Painting-Drawing-Installation\Until the Beginning\_DSC6996.jpg">
+  
+        <div class="arrow notright">&lt;</div>
+        <div class="arrow right">&gt;</div>
+        
+        <div class="dots">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        
+        <script>
+          const sliderUntil = document.querySelector('#slider-until');
+          initSlider(sliderUntil);
+        </script>
+      </div>
+      <div class="left">
+        <p>Until the Beginning</p>
+        <p>Twelve CRT TVs and media players</p>
+        <p>2019</p>
+        <p></p>
+        <p>
+          I collected personal, childhood home videos and public domain footage of 1900s China and Vietnam. They were played on decade-old CRT TVs, all paused at the same time. Memories of my own and people I don’t know collide and combine, becoming a shared history.
+        </p>
+        </div>
     </div>
 
 </body>
