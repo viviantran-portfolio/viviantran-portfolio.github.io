@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     var links = document.querySelectorAll('.header-right li a');
+    var art = document.querySelectorAll('.grid-item')
     var header = document.querySelector('header');
     var body = document.querySelector('body');
   
@@ -18,6 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
         body.style.opacity = '0';
         setTimeout(function() {
           window.location.href = event.target.href; // navigate to the link's href after a delay
+        }, 1000); // delay for 1 second (1000 milliseconds)
+      });
+    }
+
+    for (var i = 0; i < art.length; i++) {
+      art[i].addEventListener('click', function(event) {
+        header.style.backgroundColor = '#FFFFFF'; // set the header background color to white
+        body.style.opacity = '0';
+        setTimeout(function() {
+          window.location.href = event.target.closest('.grid-item').getAttribute('data-page'); // navigate to the link's href after a delay
         }, 1000); // delay for 1 second (1000 milliseconds)
       });
     }
