@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   body.style.opacity = '0';
   body.style.overflow = 'auto';
 
-  if (location.pathname === "/index.html") {
+  if (location.pathname === "/index.html" || location.pathname === "/") {
     // Fade in the header and body elements
     setTimeout(function() {
       header.style.backgroundColor = 'black';
@@ -19,7 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     // Fade in the header and body elements
     setTimeout(function() {
-      altheader.classList.add('black');
+      if(altheader != null){
+        altheader.classList.add('black');
+      }
       body.style.opacity = '1';
       body.style.backgroundColor = 'white';
     }, 100);
@@ -39,7 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (location.pathname === "/index.html"){
           header.style.backgroundColor = 'white'; // add the "black" class to the header element
         } else {
-          altheader.classList.remove('black'); // add the "black" class to the header element
+          if(altheader != null){
+            altheader.classList.remove('black'); // add the "black" class to the header element
+          }
         }
 
         body.style.opacity = '0';
@@ -56,7 +60,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add click event listener to logo link
   logoLink.addEventListener('click', function(event) {
     event.preventDefault(); // prevent the default link behavior
-    altheader.classList.add('black'); // add the "black" class to the header element
+    if(altheader != null){
+      altheader.classList.add('black'); // add the "black" class to the header element
+    }
     body.style.opacity = '0';
     setTimeout(function() {
       var url = new URL(logoLink.href);
@@ -71,7 +77,9 @@ document.addEventListener('DOMContentLoaded', function() {
     leftLinks[j].addEventListener('click', function(event) {
       if ( event.target.id !== 'off-site' && event.target.href.indexOf('#') === -1){
         event.preventDefault(); // prevent the default link behavior
-        altheader.classList.remove('black'); // add the "black" class to the header element
+        if(altheader != null){
+          altheader.classList.remove('black'); // add the "black" class to the header element
+        }
         body.style.opacity = '0';
         setTimeout(function() {
           var url = new URL(event.target.href);
