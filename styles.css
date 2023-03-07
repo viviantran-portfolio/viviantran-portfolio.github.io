@@ -402,7 +402,17 @@ header {
 
 @media screen and (max-width: 1300px) {
   html, body {
-    overflow-x: hidden;
+    overflow: hidden;
+  }
+
+  #curtain-toggle {
+    display: none;
+    pointer-events: none;
+  }
+
+  #artwork-track {
+    display: none;
+    pointer-events: none;
   }
 
   .header-left h1 {
