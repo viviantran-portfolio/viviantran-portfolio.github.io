@@ -402,7 +402,13 @@ header {
 
 @media screen and (max-width: 1300px) {
   html, body {
-    overflow-x: hidden;
+    overflow: hidden;
+    overflowY: auto;
+  }
+
+  #curtain-toggle:hover > label {
+    transform: translate(150%, -120%);
+    font-size: 20px;
   }
 
   .header-left h1 {
