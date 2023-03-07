@@ -399,3 +399,13 @@ header {
 .slider .dots .dot.active {
   filter: brightness(1.25);
 }
+
+@media screen and (max-width: 1300px) {
+  html, body {
+    overflow: hidden;
+  }
+
+  #curtain-toggle:active > label {
+    transform: translate(100%, -120%);
+  }
+}
